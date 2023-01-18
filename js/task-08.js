@@ -7,16 +7,14 @@ formEl.addEventListener("submit", (event) => {
     const elem = event.target.elements[index];
     if (elem.nodeName === "INPUT") {
       if (!elem.value) {
-        alert(`Запонить поле :"${elem.name}" `);
+        alert(`Заполнить поле :"${elem.name}" `);
         return;
       }
       userData[elem.name] = elem.value;
     }
   }
   formEl.reset();
-  
+
   console.log(userData);
   return userData;
 });
-
-
